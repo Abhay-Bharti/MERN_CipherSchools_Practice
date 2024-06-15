@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mousemove Event Example</title>
+<style>
+    #coordinates {
+        position:fixed;
+        height:200px;
+        width:200px;
+        top: 150px;
+        left: 100px;
+        background-color: rgb(188, 134, 134);
+        padding: 30px;
+        border: 1px solid rgb(10, 11, 11);
+    }
+</style>
+</head>
+<body>
+
+<div id="coordinates">Mouse coordinates: </div>
+
+<script>
+// Get a reference to the coordinates element
+const coordinatesDiv = document.getElementById('coordinates');
+
+// Define a function to handle the mousemove event
+function handleMouseMove(event) {
+    // Get the coordinates of the mouse pointer
+    const x = event.clientX;
+    const y = event.clientY;
+    // use the event.clientX and event.clientY properties to get the horizontal and vertical coordinates of the mouse pointer relative to the viewport.
+
+    // Update the content of the coordinates element
+    coordinatesDiv.textContent = 'Mouse coordinates: ' + x + ', ' + y;
+}
+
+// Attach an event listener for the mousemove event on the document
+document.addEventListener('mousemove', handleMouseMove);
+</script>
+
+</body>
+</html>

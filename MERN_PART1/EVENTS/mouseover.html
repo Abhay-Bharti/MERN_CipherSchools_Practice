@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouseover Event Example</title>
+<style>
+    body {
+        transition: background-color 5s; /* Add a simple transition effect */
+    }
+</style>
+</head>
+<body>
+<div style=" border: solid">
+<p>Move your mouse over this page to change the background color.</p>
+</div>
+<script>
+// Get a reference to the body element
+const body = document.body;
+
+// Define a function to handle the mouseover event
+function handleMouseOver() {
+    // Change the background color of the body to a different color
+    body.style.backgroundColor = "yellow";
+}
+
+// Attach an event listener for the mouseover event
+body.addEventListener('mouseover', handleMouseOver);
+</script>
+
+</body>
+</html>

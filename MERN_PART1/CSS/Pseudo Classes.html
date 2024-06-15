@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type </title>
+    <style>
+        * {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        p:first-child {
+            color: blue;
+        }
+        p:first-of-type {
+            color: rgb(165, 42, 155);
+        }
+        p:last-child {
+            color: dimgray;
+        }
+        p:last-of-type {
+            color:rgb(128, 0, 0);
+        }
+        ul li:nth-child(2) {
+            color: green;
+        }
+        ul li:nth-of-type(2n) {
+            background-color: aqua;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+            <li>Third</li>
+        </ul>
+    </header>
+    <nav>
+        <div class="box1">
+            <h1>First Paragraph</h1>
+            <p>This is 1 line</p>
+            <p>This is 2nd line</p>
+            <p>This is 3rd line</p>
+        </div>
+        <div class="box2">
+            <h2>Second Paragraph</h2>
+            <p>This is 1 line</p>
+            <p>This is 2nd line</p>
+            <p>This is 3rd line</p>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouseout Event Example</title>
+<style>
+    #myDiv {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(177, 203, 34);
+        transition: background-color 0.5s; /* Add a simple transition effect */
+    }
+</style>
+</head>
+<body>
+
+<div id="myDiv">Move your mouse out of this div to change its background color back.</div>
+
+<script>
+// Get a reference to the div element
+const div = document.getElementById('myDiv');
+
+// Store the original background color of the div
+const originalColor = div.style.backgroundColor;
+
+// Define a function to handle the mouseout event
+function handleMouseOut() {
+    // Change the background color of the div back to its original color
+    div.style.backgroundColor="green";
+}
+
+// Attach an event listener for the mouseout event
+div.addEventListener('mouseout', handleMouseOut);
+</script>
+
+</body>
+</html>

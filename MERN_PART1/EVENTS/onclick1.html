@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Event Example</title>
+</head>
+<body>
+
+<button id="myButton">Click Me!</button>
+
+<script>
+// Define a function to be called when the button is clicked
+function handleClick() {
+    alert('Button clicked!');
+}
+
+// Get a reference to the button element
+const button = document.getElementById('myButton');
+
+// Add an onclick event listener to the button
+button.addEventListener('click', handleClick);
+</script>
+
+</body>
+</html>

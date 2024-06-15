@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Down and Mouse Up Events</title>
+<style>
+  #target {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 200px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="target">Click and hold here</div>
+<div id="event"></div>
+
+<script>
+// Function to display event information
+function displayEventInformation(eventType) {
+  const eventInfoDiv = document.getElementById('event');
+  eventInfoDiv.innerHTML = `<p>${eventType} event occurred.</p>`;
+}
+
+// Add event listener for mouse down event
+document.getElementById('target').addEventListener('mousedown', function(event) {
+  displayEventInformation('Mouse down');
+});
+
+// Add event listener for mouse up event
+document.getElementById('target').addEventListener('mouseup', function(event) {
+  displayEventInformation('Mouse up');
+});
+</script>
+
+</body>
+</html>

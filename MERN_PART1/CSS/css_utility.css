@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+
+.head{
+    background-color: aquamarine;
+    font-family: 'Unbounded', cursive;
+    color: blueviolet;
+}
+
+.blog{
+    background-color: blueviolet;
+    color: #ffffff;
+    font-family: 'PT Sans', sans-serif; 
+}
+

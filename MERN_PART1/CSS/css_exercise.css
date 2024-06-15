@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+body {
+    font-family: 'Unbounded', cursive;
+}
+
+header {
+    margin: 0 200px;
+    padding: 10px 400px;
+    background-color: lightgrey;
+}
+
+.para1 {
+    margin: 10px 200px;
+    border: 2px solid black;
+    padding: 5px;
+}
