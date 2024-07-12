@@ -1,5 +1,6 @@
 const { model, Schema } = require("mongoose");
 const { isEmail } = require("validator");
+const { encryptPassword, checkPassword } = require("../bcrypt");
 
 const UserSchema = new Schema({
     name: {
@@ -42,7 +43,8 @@ UserSchema.statics.findByEmailAndPasswordForAuth = async (email, password) => {
         if (!user) {
             throw new Error("Invalid Credentials");
         }
-        if (password != user.password) {
+        const isMatch = await checkPassword(password, user.password);
+        if (!isMatch) {
             throw new Error("Invalid Credentials");
         }
         console.log(`Login Successful`);
@@ -53,6 +55,14 @@ UserSchema.statics.findByEmailAndPasswordForAuth = async (email, password) => {
         throw err;
     }
 };
+
+UserSchema.pre("save", async function (next) {
+    const user = this;
+    if (user.modifiedPaths().includes("password")) {
+        user.password = await encryptPassword(user.password);
+    }
+    next();
+});
 
 const UserModel = model("User", UserSchema);
 
