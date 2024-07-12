@@ -38,7 +38,7 @@ const UserSchema = new Schema({
 
 UserSchema.statics.findByEmailAndPasswordForAuth = async (email, password) => {
     try {
-        const user = await User.findOne({ email });
+        const user = await UserModel.findOne({ email });
         if (!user) {
             throw new Error("Invalid Credentials");
         }
