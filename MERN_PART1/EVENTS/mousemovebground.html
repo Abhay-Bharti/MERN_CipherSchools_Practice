@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mousemove Background Color Change</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+</style>
+</head>
+<body>
+<script>
+  // Function to change background color based on mouse movement
+  function changeBackgroundColor(event) {
+    // Calculate the percentage of mouse position relative to the viewport width and height
+    const percentX = event.clientX / window.innerWidth;
+    const percentY = event.clientY / window.innerHeight;
+    
+    // Map the percentage to RGB values (0-255)
+    const red = Math.round(percentX * 255);
+    const green = Math.round(percentY * 255);
+    const blue = Math.round((percentX + percentY) * 128);
+
+    //Math.round() is a built-in JavaScript function that rounds a number to the nearest integer. It takes a single argument, which is the number you want to round.
+    
+    // Set the background color using the calculated RGB values
+    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  }
+
+  // Add event listener for mousemove event
+  document.addEventListener('mousemove', changeBackgroundColor);
+</script>
+</body>
+</html>

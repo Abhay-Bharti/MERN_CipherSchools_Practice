@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute selector</title>
+    <style>
+        /* * {
+            background-color: rgb(130, 167, 167);
+        } */
+
+        h3+a {
+            color: rgb(190, 31, 116);
+        }
+
+        input[type="text"] {
+            background-color: dodgerblue;
+            color: bisque;
+        }
+
+        a[href *="facebook"] {
+            color: rgb(116, 226, 43);
+        }
+
+        a[ href ^="//"] {
+            color: aliceblue;
+            background-color: blueviolet;
+        }
+
+        a[ href $="in"] {
+            color: brown;
+            font-size: 20px;
+        }
+
+        input[ type ^="pa"] {
+            color: coral;
+            background-color: darkblue;
+        }
+
+        section.my_article > article > p {
+            color: rgb(13, 255, 255);
+            background-color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p class="head">
+    <h3>LINKS</h3>
+    <a href="https://www.google.com/">Google India</a><br>
+    <a href="https://facebook.com/">facebook</a><br>
+    <a href="//microsoft.com/">microsoft</a><br>
+    <a href="instagram.co.in">instagram</a><br>
+    </p>
+
+    <section class="my_article">
+        <article>
+            <h1>Content</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum natus hic iste voluptatem esse! Accusamus
+            nobis
+            omnis voluptatum pariatur dignissimos sunt deleniti voluptas, earum quae dolore, doloribus fugit nam
+            suscipit quam quidem molestiae, debitis totam error provident ut ipsa consectetur corporis? Nulla hic dolore
+            aperiam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae minus inventore pariatur excepturi accusamus placeat dolor nisi repellendus totam error sequi repellat veniam quaerat, deserunt corrupti deleniti omnis tempora repudiandae, fugiat molestias quisquam iusto sunt. Officiis corrupti cum nostrum ea libero odio perferendis, architecto saepe?</p>
+        </article>
+        <article>
+            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo expedita, praesentium suscipit tenetur,
+                quaerat hic ducimus reiciendis error perspiciatis veniam minus. Officia rerum quos qui praesentium,
+                corporis omnis? Nostrum officiis voluptates dicta quod repellendus quae necessitatibus, asperiores
+                voluptate consequuntur quis, quaerat perferendis molestiae ipsum delectus corporis cum! Id rerum quia
+                accusantium, enim sint minus quidem eaque, eius ratione vitae deleniti assumenda suscipit excepturi
+                nostrum aspernatur ab omnis similique aperiam quaerat dicta velit quam perferendis illum. Aspernatur
+                reiciendis inventore, dolore tempora voluptas nulla consequatur vitae fugiat, quasi perferendis iste
+                provident expedita voluptates eius illum nesciunt voluptatum vel explicabo quo! Dolor, nam.</P>
+        </article>
+    </section>
+    <br><br>
+    <form>
+        <label for="Username">Username</label>
+        <input type="text" name="Username" id="Username"><br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"><br><br>
+    </form>
+</body>
+</html>

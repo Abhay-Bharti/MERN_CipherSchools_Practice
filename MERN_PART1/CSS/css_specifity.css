@@ -1,0 +1,26 @@
+/* inline style attribute > id selector > class selector > element selector */
+
+h1{
+    color: rgb(25, 170, 49);
+}
+
+.list h1 {
+    color: blueviolet
+}
+
+.first .list h1 {
+    color: darkmagenta;  
+}
+
+/* 
+In above example, more class has more specifity */
+
+.list li {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.content > p {
+    background-color: blueviolet;
+    color: white;
+}

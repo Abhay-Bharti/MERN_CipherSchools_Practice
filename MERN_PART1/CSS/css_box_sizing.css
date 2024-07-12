@@ -1,0 +1,23 @@
+hr {
+    border: 4px solid blue;
+    width: 600px;
+    margin-left: 30px;
+    
+}
+
+#box1 {
+    width: 600px;
+    background-color: aquamarine;
+    border: 5px inset darkgreen;
+    padding: 20px;
+    margin: 30px;
+}
+
+#Box2 {
+    box-sizing: border-box;
+    width: 600px;
+    background-color: aquamarine;
+    border: 5px inset darkgreen;
+    padding: 20px;
+    margin: 30px;
+}
